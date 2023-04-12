@@ -2,13 +2,13 @@ package com.bridgelabz.employeewage;
 
 
 public class EmpWage {
-//    static final int FULL_DAY_HOUR = 8;
-//    static final int PART_DAY_HOUR = 4;
-//    static final int wagePerHour = 20;
-//    static final int totalWorkingDays = 20;
-//    static final int TOTAL_WORKING_HOUR = 100;
+      int fullDayHour;
+      int partDayHour;
+      int wagePerHour;
+      int totalWorkingDays;
+      int totalWorkingHour;
 
-    public  void employeeWage(int fullDayHour,int partDayHour,int wagePerHour,int totalWorkingDays,int totalWorkingHour){
+    public  void employeeWage(){
 
         int day = 1;
         int workingHour=0;
@@ -46,15 +46,65 @@ public class EmpWage {
         System.out.println("total wage is " +totalWage );
     }
 
+    public int getFullDayHour() {
+        return fullDayHour;
+    }
+
+    public void setFullDayHour(int fullDayHour) {
+        this.fullDayHour = fullDayHour;
+    }
+
+    public int getPartDayHour() {
+        return partDayHour;
+    }
+
+    public void setPartDayHour(int partDayHour) {
+        this.partDayHour = partDayHour;
+    }
+
+    public int getWagePerHour() {
+        return wagePerHour;
+    }
+
+    public void setWagePerHour(int wagePerHour) {
+        this.wagePerHour = wagePerHour;
+    }
+
+    public int getTotalWorkingDays() {
+        return totalWorkingDays;
+    }
+
+    public void setTotalWorkingDays(int totalWorkingDays) {
+        this.totalWorkingDays = totalWorkingDays;
+    }
+
+    public int getTotalWorkingHour() {
+        return totalWorkingHour;
+    }
+
+    public void setTotalWorkingHour(int totalWorkingHour) {
+        this.totalWorkingHour = totalWorkingHour;
+    }
+
     public static void main(String[] args) {
         EmpWage company1 = new EmpWage();
         System.out.println("For company one : ");
-        company1.employeeWage(8,4,20,25,100);
+        company1.setFullDayHour(8);
+        company1.setPartDayHour(4);
+        company1.setWagePerHour(20);
+        company1.setTotalWorkingDays(20);
+        company1.setTotalWorkingHour(100);
+        company1.employeeWage();
         System.out.println();
         System.out.println("For company two : ");
-       EmpWage company2 = new EmpWage();
-        company2.employeeWage(12,6,15,20,120);
-        
+        EmpWage company2 = new EmpWage();
+        company2.setFullDayHour(12);
+        company2.setPartDayHour(6);
+        company2.setWagePerHour(18);
+        company2.setTotalWorkingDays(22);
+        company2.setTotalWorkingHour(120);
+        company2.employeeWage();
+
 
     }
 }
