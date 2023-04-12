@@ -10,41 +10,46 @@ public class EmpWage {
 
     public  void employeeWage(){
 
-        int dayWage = 0;
+
         int day = 1;
         int workingHour=0;
         int totalWage=0;
 
         while (day <= TOTAL_WORKING_DAYS && workingHour < TOTAL_WORKING_HOUR) {
+            int dayWage = 0;
+            System.out.print(day +" day");
             int isPresent = (int) (Math.random() * 10 % 3);
             switch (isPresent) {
                 case 1 : {
                     dayWage = PART_DAY_HOUR * WAGE_PER_HOUR;
-                    System.out.println("part time");
+                   // System.out.println("part time");
                     workingHour = workingHour + PART_DAY_HOUR;
                 }
                 case 2 : {
                     dayWage = FULL_DAY_HOUR * WAGE_PER_HOUR;
-                    System.out.println("full time");
+                   // System.out.println("full time");
                     workingHour += FULL_DAY_HOUR;
                 }
-                default : System.out.println("absent");
+                default : //System.out.println("absent");
+            }
+            if (workingHour>100){
+                workingHour=100;
             }
             totalWage=totalWage+dayWage;
-            System.out.println(workingHour + " working hour");
-            System.out.println(dayWage);
-            System.out.println(day);
+            System.out.print(" total working hour is "+workingHour);
+            System.out.print( " and current day wage is "+ dayWage);
+            System.out.println();
+
             day++;
 
 
         }
-        System.out.println(totalWage);
+        System.out.println("total wage is " +totalWage );
     }
 
     public static void main(String[] args) {
-        EmpWage obj1 = new EmpWage();
-        obj1.employeeWage();
-
+EmpWage obj = new EmpWage();
+obj.employeeWage();
 
     }
 }
