@@ -31,8 +31,8 @@ public class EmpWage {
                 }
                 default : //System.out.println("absent");
             }
-            if (workingHour>100){
-                workingHour=100;
+            if (workingHour>totalWorkingHour){
+                workingHour=totalWorkingHour;
             }
             totalWage=totalWage+dayWage;
             System.out.print(" total working hour is "+workingHour);
@@ -53,8 +53,8 @@ public class EmpWage {
         System.out.println();
         System.out.println("For company two : ");
        EmpWage company2 = new EmpWage();
-        company2.employeeWage(12,6,15,20,100);
-
+        company2.employeeWage(12,6,15,20,120);
+        
 
     }
 }
